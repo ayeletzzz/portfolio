@@ -264,6 +264,32 @@ a.case-row:focus-visible .case-shot{transform:scale(1.035)}
   }
 }
 
+/* ── EARLIER WORK — older case studies, built and shown in Figma ── */
+.cell-earlier{
+  grid-column:1/-1;padding:72px 400px;
+  border:0;
+}
+.earlier-list{margin-top:32px}
+.earlier-row{
+  display:flex;align-items:center;gap:20px;
+  padding:16px 0;
+}
+.earlier-year{font-size:16px;font-weight:400;color:var(--fg);width:44px;flex-shrink:0}
+.earlier-title{font-size:16px;font-weight:600;flex:1 1 auto}
+.earlier-title-text{
+  position:relative;display:inline-block;padding-bottom:4px;
+}
+.earlier-title-text::after{
+  content:"";position:absolute;left:0;bottom:0;
+  height:6px;width:100%;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='6' viewBox='0 0 16 6'%3E%3Cpath d='M0 3 Q4 0.5 8 3 T16 3' fill='none' stroke='%23000' stroke-width='1'/%3E%3C/svg%3E");
+  background-repeat:repeat-x;background-size:16px 6px;
+  opacity:0;transition:opacity 150ms ease;
+}
+.earlier-row:hover .earlier-title-text::after{opacity:1}
+.earlier-arrow{flex-shrink:0;display:flex;color:var(--fg)}
+.earlier-arrow svg{width:14px;height:14px}
+
 /* ── ABOUT — sits in the pill cell, above the pile ── */
 .about-label{
   display:inline-block;position:relative;z-index:3;
@@ -356,6 +382,7 @@ a.case-row:focus-visible .case-shot{transform:scale(1.035)}
   .cases-stage{padding:72px 80px}
   .case-row{padding:0 80px}
   .cell-ask{padding:80px 80px}
+  .cell-earlier{padding:72px 80px}
 }
 @media(max-width:1000px){
   .grid{grid-template-columns:repeat(2,1fr);grid-template-rows:auto}
@@ -369,6 +396,7 @@ a.case-row:focus-visible .case-shot{transform:scale(1.035)}
   .cell-ask{padding:48px 24px}
   .cases-stage{padding:56px 24px}
   .cases-track{gap:72px}
+  .cell-earlier{padding:56px 24px}
   .case-desc{max-width:100%}
   .case-row{gap:24px;padding:0}
   .cell-hero{padding:120px 24px 40px}
@@ -683,6 +711,28 @@ window.glowTrail(document.getElementById('pw-gate'));
         <div class="case-tags"><span class="case-tag">Enterprise</span><span class="case-tag">Data Viz</span><span class="case-tag">Dashboards</span><span class="case-tag">Exec Users</span><span class="case-tag">Shipped</span></div>
       </div>
       </div>
+    </div>
+  </section>
+
+  <!-- EARLIER WORK -->
+  <section class="cell cell-earlier" id="earlier-work" aria-label="Earlier work">
+    <p class="about-label">Earlier work</p>
+    <div class="earlier-list">
+      <a class="earlier-row" href="https://www.figma.com/proto/080rvcvI1wB3mJ8jYMdc1i/%3C%3C-Portfolio---Ayelet-Zwickler-%3E%3E?node-id=3103-14842&t=U113KIDuhoy9tmjN-8&scaling=scale-down-width&content-scaling=fixed&page-id=537%3A11833&starting-point-node-id=955%3A18128&hide-ui=1" target="_blank" rel="noopener" aria-label="View the Sales Enablement Tool case study in Figma">
+        <span class="earlier-year">2023</span>
+        <span class="earlier-title"><span class="earlier-title-text">Sales Enablement Tool</span></span>
+        <span class="earlier-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg></span>
+      </a>
+      <a class="earlier-row" href="https://www.figma.com/proto/080rvcvI1wB3mJ8jYMdc1i/%3C%3C-Portfolio---Ayelet-Zwickler-%3E%3E?node-id=3103-18449&t=XImsPsQxAjHjapJc-0&scaling=scale-down-width&content-scaling=fixed&page-id=537%3A11833&starting-point-node-id=955%3A18128&hide-ui=1" target="_blank" rel="noopener" aria-label="View the Account Setup case study in Figma">
+        <span class="earlier-year">2022</span>
+        <span class="earlier-title"><span class="earlier-title-text">Account Setup</span></span>
+        <span class="earlier-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg></span>
+      </a>
+      <a class="earlier-row" href="https://www.figma.com/proto/080rvcvI1wB3mJ8jYMdc1i/%3C%3C-Portfolio---Ayelet-Zwickler-%3E%3E?node-id=3103-19171&t=ZLZhNInuoJRX3tJx-8&scaling=scale-down-width&content-scaling=fixed&page-id=537%3A11833&starting-point-node-id=955%3A18128&hide-ui=1" target="_blank" rel="noopener" aria-label="View the Newsplace App (Taboola) case study in Figma">
+        <span class="earlier-year">2021</span>
+        <span class="earlier-title"><span class="earlier-title-text">Newsplace App (Taboola)</span></span>
+        <span class="earlier-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg></span>
+      </a>
     </div>
   </section>
 
