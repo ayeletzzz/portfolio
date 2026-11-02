@@ -115,53 +115,39 @@ p{font-size:16px;line-height:1.72}
   border-top:0;
 }
 
-/* title, hook and the spec list on the left; the shot on the right */
-.hero-top{
-  display:grid;
-  grid-template-columns:minmax(0,40fr) minmax(0,60fr);
-  gap:clamp(32px,3.5vw,56px);
-  align-items:start;
-  margin-top:clamp(16px,2vw,24px);
-}
-.hero-left{min-width:0}
-.hero-left .hook{margin-top:16px}
+/* kicker, headline and pills stacked full width; shot below, full width */
 h1{
   font-weight:600;
   font-size:40px;
   line-height:1.1;letter-spacing:-0.022em;
   max-width:14ch;
 }
-.hook{
-  font-size:18px;
-  font-weight:400;line-height:1.45;letter-spacing:-0.008em;
-  max-width:54ch;
+.hero-kicker{
+  font-size:24px;font-weight:500;
+  line-height:1.3;letter-spacing:-0.005em;
 }
-.hook .hl{
-  background-image:linear-gradient(var(--accent),var(--accent));
-  background-repeat:no-repeat;
-  background-size:100% 0.58em;
-  background-position:0 62%;
-  padding:0 4px;
+.hero-headline{
+  font-weight:700;
+  font-size:40px;
+  line-height:1.15;letter-spacing:-0.022em;
+  max-width:900px;
+  margin-top:clamp(16px,2vw,24px);
 }
 
-/* ── META — one line per fact, stacked ── */
+/* ── META — pill row of facts ── */
 .meta{
-  display:flex;flex-direction:column;
+  display:flex;flex-wrap:wrap;gap:12px;
   margin-top:clamp(24px,3vw,40px);
 }
-.meta>div{
-  display:grid;grid-template-columns:110px minmax(0,1fr);
-  gap:16px;align-items:baseline;
-  padding:8px 0;border-top:0.5px solid var(--line);
+.meta .pill{
+  border:1px solid var(--line);border-radius:999px;
+  padding:10px 20px;
+  font-size:14px;font-weight:500;line-height:1.3;
+  background:var(--bg);
 }
-.meta>div:first-child{border-top:none}
-@media(max-width:520px){.meta>div{grid-template-columns:1fr;gap:8px}}
-.meta-k{font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase}
-.meta-v{font-size:16px;margin-top:0;line-height:1.4;font-weight:500}
 
 /* ── HERO SHOT PANEL ── */
-.hero-shot{margin-top:0}
-@media(max-width:900px){.hero-shot{margin-top:clamp(32px,5vw,56px)}}
+.hero-shot{margin-top:clamp(40px,5vw,64px)}
 .hero-shot img{
   width:100%;display:block;
   border-radius:16px;
@@ -788,36 +774,21 @@ function pwCheck(){
   <!-- ── HERO ── -->
   <section class="hero" id="overview">
     <div class="wrap">
-      <div class="hero-top">
-        <div class="hero-left">
-          <h1>Lead Handling Agent</h1>
+      <p class="hero-kicker">Lead Handling Agent</p>
 
-          <p class="hook">The first AI agent to sell cars on a dealership&#8217;s behalf, no human in the loop. In its first 30 days it handled <span class="hl">5,435 leads and set 243 appointments</span>.</p>
+      <h1 class="hero-headline">The first AI agent to sell cars on a dealership&#8217;s behalf, no human in the loop. In its first 30 days it handled 5,435 leads and set 243 appointments.</h1>
 
-          <div class="meta">
-            <div>
-              <p class="meta-k">Years</p>
-              <p class="meta-v">2025-2026</p>
-            </div>
-            <div>
-              <p class="meta-k">Role</p>
-              <p class="meta-v">Product Designer</p>
-            </div>
-            <div>
-              <p class="meta-k">Scope</p>
-              <p class="meta-v">0&rarr;1, Research, Agent Design, Code shipped to production</p>
-            </div>
-            <div>
-              <p class="meta-k">Platform</p>
-              <p class="meta-v">Web SaaS. complex.</p>
-            </div>
-          </div>
-        </div>
+      <div class="meta">
+        <span class="pill">2025-2026</span>
+        <span class="pill">Product Designer</span>
+        <span class="pill">0&rarr;1</span>
+        <span class="pill">Agent Design</span>
+        <span class="pill">Web SaaS</span>
+      </div>
 
-        <div class="hero-shot">
-          <img src="lead-handling-assets/design-your-agent-v3.png"
-               alt="Design Your Agent V3, the Agent Hub with Omni chat and the instructions panel">
-        </div>
+      <div class="hero-shot">
+        <img src="lead-handling-assets/design-your-agent-v3.png"
+             alt="Design Your Agent V3, the Agent Hub with Omni chat and the instructions panel">
       </div>
     </div>
   </section>
