@@ -83,7 +83,7 @@ strong{font-weight:600}
 
 /* ── LAYOUT ── */
 .wrap{max-width:none;margin:0;padding:0 300px}
-.label{font-size:12px;letter-spacing:.16em;text-transform:uppercase;font-weight:700}
+.label{font-size:16px;letter-spacing:.02em;text-transform:uppercase;font-weight:700}
 section{padding-block:clamp(72px,9vw,128px)}
 section+section{border-top:none}
 /* the label sits on top of the section, with everything flush left under it */
@@ -93,8 +93,8 @@ section+section{border-top:none}
 
 h2.hdr{
   font-weight:700;
-  font-size:32px;
-  line-height:1.15;letter-spacing:-0.02em;
+  font-size:24px;
+  line-height:1.25;letter-spacing:-0.015em;
   max-width:none;
 }
 h3.bene{
@@ -107,6 +107,10 @@ p{font-size:16px;line-height:1.72}
 .body{margin-top:24px}
 .body p{max-width:60ch}
 .body p+p{margin-top:1.1em}
+
+/* ── SECTION-END SQUIGGLE ── */
+.squiggle{margin-top:clamp(32px,4vw,48px);width:120px;color:var(--fg)}
+.squiggle svg{display:block;width:100%;height:auto}
 
 /* ── HERO ── */
 .hero{
@@ -304,7 +308,7 @@ figcaption{
 .dec-img{padding:clamp(16px,2vw,32px) clamp(16px,2vw,32px) clamp(16px,2vw,32px) 0}
 .dec-img img{width:100%;height:auto;display:block;border-radius:0;object-fit:contain}
 .dec-num{font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--fg);margin-bottom:16px}
-.dec-title{font-size:32px;font-weight:700;line-height:1.15;letter-spacing:-0.02em}
+.dec-title{font-size:24px;font-weight:700;line-height:1.25;letter-spacing:-0.015em}
 .dec-body{font-size:16px;line-height:1.7;color:var(--fg);margin-top:16px}
 .dec-shot-row{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:32px}
 .dec-shot-row img{width:100%;height:auto;display:block;border-radius:0}
@@ -324,7 +328,7 @@ figcaption{
   padding-block:clamp(32px,4vw,56px);
 }
 .obs-label{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--fg)}
-.obs-title{font-size:32px;font-weight:700;line-height:1.15;letter-spacing:-0.02em}
+.obs-title{font-size:24px;font-weight:700;line-height:1.25;letter-spacing:-0.015em}
 .obs-divider{display:none}
 .obs-img-wrap{border-radius:16px;overflow:hidden}
 .obs-img-wrap img{width:100%;height:auto;display:block}
@@ -575,10 +579,10 @@ details .ans{padding-bottom:32px;max-width:60ch}
   --lc-accent-ink:#3d5800;
 }
 /* the challenge headline and the chart's own title share one size */
-#problem h2.hdr{font-size:18px;line-height:1.4;letter-spacing:-0.005em;max-width:none;font-weight:400}
-.lc-title{font-size:18px;font-weight:400;line-height:1.35;letter-spacing:-0.005em;display:none}
+#problem h2.hdr{font-size:16px;line-height:1.6;letter-spacing:-0.005em;max-width:none;font-weight:400}
+.lc-title{font-size:16px;font-weight:400;line-height:1.6;letter-spacing:-0.005em;display:none}
 .lc-sub{
-  font-size:32px;font-weight:700;line-height:1.3;letter-spacing:-0.02em;
+  font-size:24px;font-weight:700;line-height:1.3;letter-spacing:-0.015em;
   margin-top:16px;margin-bottom:clamp(32px,3.5vw,40px);max-width:34ch;
 }
 .lc-sub--standalone{margin-top:clamp(48px,5vw,64px);margin-bottom:0}
@@ -834,6 +838,8 @@ function pwCheck(){
       </div>
 
       <h2 class="lc-sub lc-sub--standalone">The opportunity was to connect that data to an agent that could act on it the moment a lead came in, 24/7, and hand off to a salesperson only when it actually mattered.</h2>
+
+      <div class="squiggle" aria-hidden="true"><svg viewBox="0 0 120 14" xmlns="http://www.w3.org/2000/svg"><path d="M0 7 Q3 2 6 7 T12 7 T18 7 T24 7 T30 7 T36 7 T42 7 T48 7 T54 7 T60 7 T66 7 T72 7 T78 7 T84 7 T90 7 T96 7 T102 7 T108 7 T114 7 T120 7" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg></div>
     </div>
   </section>
 
@@ -869,6 +875,8 @@ function pwCheck(){
           <p class="finding-q">How do you let dealers shape the agent's behavior without letting them break it?</p>
         </div>
       </div>
+
+      <div class="squiggle" aria-hidden="true"><svg viewBox="0 0 120 14" xmlns="http://www.w3.org/2000/svg"><path d="M0 7 Q3 2 6 7 T12 7 T18 7 T24 7 T30 7 T36 7 T42 7 T48 7 T54 7 T60 7 T66 7 T72 7 T78 7 T84 7 T90 7 T96 7 T102 7 T108 7 T114 7 T120 7" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg></div>
     </div>
   </section>
 
@@ -923,6 +931,8 @@ function pwCheck(){
 
       </div>
       </div>
+
+      <div class="squiggle" aria-hidden="true"><svg viewBox="0 0 120 14" xmlns="http://www.w3.org/2000/svg"><path d="M0 7 Q3 2 6 7 T12 7 T18 7 T24 7 T30 7 T36 7 T42 7 T48 7 T54 7 T60 7 T66 7 T72 7 T78 7 T84 7 T90 7 T96 7 T102 7 T108 7 T114 7 T120 7" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg></div>
     </div>
   </section>
 
@@ -952,6 +962,8 @@ function pwCheck(){
           </div>
         </div>
       </div>
+
+      <div class="squiggle" aria-hidden="true"><svg viewBox="0 0 120 14" xmlns="http://www.w3.org/2000/svg"><path d="M0 7 Q3 2 6 7 T12 7 T18 7 T24 7 T30 7 T36 7 T42 7 T48 7 T54 7 T60 7 T66 7 T72 7 T78 7 T84 7 T90 7 T96 7 T102 7 T108 7 T114 7 T120 7" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg></div>
     </div>
   </section>
 
@@ -1015,6 +1027,8 @@ function pwCheck(){
 
         </div>
       </div>
+
+      <div class="squiggle" aria-hidden="true"><svg viewBox="0 0 120 14" xmlns="http://www.w3.org/2000/svg"><path d="M0 7 Q3 2 6 7 T12 7 T18 7 T24 7 T30 7 T36 7 T42 7 T48 7 T54 7 T60 7 T66 7 T72 7 T78 7 T84 7 T90 7 T96 7 T102 7 T108 7 T114 7 T120 7" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg></div>
     </div>
   </section>
 
@@ -1049,6 +1063,8 @@ function pwCheck(){
       <div style="overflow:hidden; border-radius:12px;">
         <img src="lead-handling-assets/performance-v1.png" alt="Performance dashboard during beta" style="width:100%; display:block; border-radius:12px; box-shadow: 0 2px 24px rgba(0,0,0,0.08);">
       </div>
+
+      <div class="squiggle" aria-hidden="true"><svg viewBox="0 0 120 14" xmlns="http://www.w3.org/2000/svg"><path d="M0 7 Q3 2 6 7 T12 7 T18 7 T24 7 T30 7 T36 7 T42 7 T48 7 T54 7 T60 7 T66 7 T72 7 T78 7 T84 7 T90 7 T96 7 T102 7 T108 7 T114 7 T120 7" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg></div>
     </div>
   </section>
 
@@ -1070,6 +1086,8 @@ function pwCheck(){
         Paying customers, total leads handled, and total appointments set are still blank in the content doc.
         Drop them in and this becomes the strongest stat row on the page.
       </div>
+
+      <div class="squiggle" aria-hidden="true"><svg viewBox="0 0 120 14" xmlns="http://www.w3.org/2000/svg"><path d="M0 7 Q3 2 6 7 T12 7 T18 7 T24 7 T30 7 T36 7 T42 7 T48 7 T54 7 T60 7 T66 7 T72 7 T78 7 T84 7 T90 7 T96 7 T102 7 T108 7 T114 7 T120 7" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg></div>
     </div>
   </section>
 
@@ -1134,6 +1152,8 @@ function pwCheck(){
           </div>
         </div>
       </div>
+
+      <div class="squiggle" aria-hidden="true"><svg viewBox="0 0 120 14" xmlns="http://www.w3.org/2000/svg"><path d="M0 7 Q3 2 6 7 T12 7 T18 7 T24 7 T30 7 T36 7 T42 7 T48 7 T54 7 T60 7 T66 7 T72 7 T78 7 T84 7 T90 7 T96 7 T102 7 T108 7 T114 7 T120 7" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg></div>
     </div>
   </section>
 
@@ -1157,6 +1177,8 @@ function pwCheck(){
           <p class="next-card-body">Re-engaging shoppers who missed appointments, following up after a sale. The agent handled the first contact window. Next is everything that comes after.</p>
         </div>
       </div>
+
+      <div class="squiggle" aria-hidden="true"><svg viewBox="0 0 120 14" xmlns="http://www.w3.org/2000/svg"><path d="M0 7 Q3 2 6 7 T12 7 T18 7 T24 7 T30 7 T36 7 T42 7 T48 7 T54 7 T60 7 T66 7 T72 7 T78 7 T84 7 T90 7 T96 7 T102 7 T108 7 T114 7 T120 7" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg></div>
     </div>
   </section>
 
@@ -1189,6 +1211,8 @@ function pwCheck(){
           <p>We measured everything from the dealer's side. The moment that stuck with me most from beta was when an agent booked an appointment with no human involvement and the customer felt personally taken care of. We validated the outcome but never went deeper. Understanding how shoppers experienced the agent would have made every trust decision sharper.</p>
         </div>
       </div>
+
+      <div class="squiggle" aria-hidden="true"><svg viewBox="0 0 120 14" xmlns="http://www.w3.org/2000/svg"><path d="M0 7 Q3 2 6 7 T12 7 T18 7 T24 7 T30 7 T36 7 T42 7 T48 7 T54 7 T60 7 T66 7 T72 7 T78 7 T84 7 T90 7 T96 7 T102 7 T108 7 T114 7 T120 7" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg></div>
     </div>
   </section>
 
