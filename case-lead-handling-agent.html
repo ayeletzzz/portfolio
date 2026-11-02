@@ -377,12 +377,12 @@ figcaption{
 .obs-img-wrap{border-radius:16px;overflow:hidden}
 .obs-img-wrap img{width:100%;height:auto;display:block}
 .obs-img-scroll{
-  display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x proximity;
+  display:flex;gap:16px;overflow-x:auto;
   -webkit-overflow-scrolling:touch;scrollbar-width:none;
   margin:0 -300px;padding:0 300px;
 }
 .obs-img-scroll::-webkit-scrollbar{display:none}
-.obs-img-scroll .obs-img-wrap{flex:0 0 min(640px,85%);scroll-snap-align:start}
+.obs-img-scroll .obs-img-wrap{flex:0 0 min(640px,85%)}
 @media(max-width:1340px) and (min-width:701px){.obs-img-scroll{margin:0 -80px;padding:0 80px}}
 @media(max-width:700px){.obs-img-scroll{margin:0 -24px;padding:0 24px}.obs-img-scroll .obs-img-wrap{flex-basis:88%}}
 .obs-caption{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--fg);margin-top:8px;line-height:1.7}
