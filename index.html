@@ -126,7 +126,8 @@ input,button{font:inherit;color:inherit;background:none;border:none}
 
 /* ── INTRO: the headline and label rise in letter by letter ── */
 .js #hero-sub,
-.js .aud-label{visibility:hidden}
+.js .aud-label,
+.js .footer-egg{visibility:hidden}
 .js .aud-pill{opacity:0;transform:translateY(10px)}
 .js .aud-pill.is-in{opacity:1;transform:none}
 
@@ -1229,6 +1230,33 @@ window.initHeroTrail = function(){
   });
   link.addEventListener('mouseenter',play);
   link.addEventListener('focus',play);
+})();
+</script>
+<script>
+// ── FOOTER EGG: rises in letter by letter, same as the hero, once it scrolls into view ──
+(function(){
+  var el=document.querySelector('.footer-egg');
+  if(!el) return;
+
+  function reveal(){ el.style.visibility='visible'; }
+  if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){ reveal(); return; }
+
+  var RISE=160, STEP=55;
+  var started=false;
+  function run(){
+    if(started) return;
+    started=true;
+    window.riseText(el,0,RISE,STEP);
+  }
+
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(entries){
+      if(entries[0].isIntersecting){ run(); io.disconnect(); }
+    },{threshold:0.6});
+    io.observe(el);
+  } else {
+    reveal();
+  }
 })();
 </script>
 </body>

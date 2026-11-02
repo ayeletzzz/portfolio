@@ -208,6 +208,17 @@ h1{
 .stat-l{font-size:16px;font-weight:400;margin-top:16px;line-height:1.5;max-width:22ch}
 .stat-note{font-size:16px;margin-top:24px;margin-bottom:24px;max-width:68ch;line-height:1.7}
 
+/* ── OUTCOMES SPLIT ── */
+.outcomes-wrap{display:grid;grid-template-columns:minmax(260px,340px) 1fr;gap:clamp(32px,5vw,64px);align-items:start}
+.outcomes-stats{display:flex;flex-direction:column;gap:0;margin-top:clamp(32px,4vw,40px)}
+.outcomes-stats .stat{padding:20px 0}
+.outcomes-stats .stat-l{max-width:none}
+.outcomes-shot{margin-right:-300px;align-self:start}
+.outcomes-shot img{width:100%;display:block;border-radius:12px 0 0 12px;box-shadow:0 2px 24px rgba(0,0,0,0.08)}
+@media(max-width:1340px) and (min-width:701px){.outcomes-shot{margin-right:-80px}}
+@media(max-width:900px){.outcomes-wrap{grid-template-columns:1fr}.outcomes-shot{margin-right:-80px}}
+@media(max-width:700px){.outcomes-wrap{grid-template-columns:1fr}.outcomes-shot{margin-right:-24px}.outcomes-shot img{border-radius:12px}}
+
 /* ── LIGHTBOX ── */
 #img-lb{
   position:fixed;inset:0;z-index:500;
@@ -1111,11 +1122,11 @@ function pwCheck(){
               <div class="ver-callout" style="--callout-top:268px">
                 <p>This is the system layer, the agent&#8217;s default behavior, set by Fullpath. Dealers can read it, but shouldn&#8217;t be able to change it.</p>
               </div>
-              <svg class="ver-callout-line" style="--callout-top:268px" viewBox="0 0 110 12" xmlns="http://www.w3.org/2000/svg"><line x1="10" y1="6" x2="104" y2="6" stroke="#000" stroke-width="1"/><path d="M18 1 L8 6 L18 11" fill="none" stroke="#000" stroke-width="1"/></svg>
+              <svg class="ver-callout-line" style="--callout-top:268px;width:52px" viewBox="0 0 110 12" xmlns="http://www.w3.org/2000/svg"><line x1="10" y1="6" x2="104" y2="6" stroke="#000" stroke-width="1"/><path d="M18 1 L8 6 L18 11" fill="none" stroke="#000" stroke-width="1"/></svg>
               <div class="ver-callout" style="--callout-top:378px">
                 <p>This is the dealer&#8217;s layer, where they add their own rules on top.</p>
               </div>
-              <svg class="ver-callout-line" style="--callout-top:378px" viewBox="0 0 110 12" xmlns="http://www.w3.org/2000/svg"><line x1="10" y1="6" x2="104" y2="6" stroke="#000" stroke-width="1"/><path d="M18 1 L8 6 L18 11" fill="none" stroke="#000" stroke-width="1"/></svg>
+              <svg class="ver-callout-line" style="--callout-top:378px;width:52px" viewBox="0 0 110 12" xmlns="http://www.w3.org/2000/svg"><line x1="10" y1="6" x2="104" y2="6" stroke="#000" stroke-width="1"/><path d="M18 1 L8 6 L18 11" fill="none" stroke="#000" stroke-width="1"/></svg>
               <img src="lead-handling-assets/design-your-agent-v2.png" alt="Design Your Agent V2">
             </div>
             <div class="ver-result-row">
@@ -1154,36 +1165,39 @@ function pwCheck(){
 
   <!-- ── BETA RESULTS ── -->
   <section id="results">
+    <div class="wrap outcomes-wrap">
+      <div class="outcomes-text">
+        <div class="sec-head">
+          <p class="label">Outcomes</p>
+          <h2 class="hdr">5 dealerships. 30 days. Every single one set appointments and influenced sales.</h2>
+        </div>
+
+        <div class="stats outcomes-stats">
+          <div class="stat">
+            <p class="stat-n">5,435</p>
+            <p class="stat-l">leads handled without human involvement</p>
+          </div>
+          <div class="stat">
+            <p class="stat-n">243</p>
+            <p class="stat-l">appointments set</p>
+          </div>
+          <div class="stat">
+            <p class="stat-n">178</p>
+            <p class="stat-l">sales influenced</p>
+          </div>
+        </div>
+
+        <p class="stat-note">
+          Plus an 80%+ reduction in BDC workload on initial follow-up, and an average response time under 10 minutes on every
+          lead. Arapahoe Kia saw appointment rates go from 15.4% to 17.1% in the first 30 days after launch.
+        </p>
+      </div>
+
+      <div class="outcomes-shot">
+        <img src="lead-handling-assets/performance-v1.png" alt="Lead Handling Agent performance dashboard">
+      </div>
+    </div>
     <div class="wrap">
-      <div class="sec-head">
-        <p class="label">Outcomes</p>
-        <h2 class="hdr">5 dealerships. 30 days. Every single one set appointments and influenced sales.</h2>
-      </div>
-
-      <div class="stats three">
-        <div class="stat">
-          <p class="stat-n">5,435</p>
-          <p class="stat-l">leads handled without human involvement</p>
-        </div>
-        <div class="stat">
-          <p class="stat-n">243</p>
-          <p class="stat-l">appointments set</p>
-        </div>
-        <div class="stat">
-          <p class="stat-n">178</p>
-          <p class="stat-l">sales influenced</p>
-        </div>
-      </div>
-
-      <p class="stat-note">
-        Plus an 80%+ reduction in BDC workload on initial follow-up, and an average response time under 10 minutes on every
-        lead. Arapahoe Kia saw appointment rates go from 15.4% to 17.1% in the first 30 days after launch.
-      </p>
-
-      <div style="overflow:hidden; border-radius:12px;">
-        <img src="lead-handling-assets/performance-v1.png" alt="Performance dashboard during beta" style="width:100%; display:block; border-radius:12px; box-shadow: 0 2px 24px rgba(0,0,0,0.08);">
-      </div>
-
       <div class="squiggle" aria-hidden="true"><svg viewBox="0 0 120 14" xmlns="http://www.w3.org/2000/svg"><path d="M0 7 Q3 2 6 7 T12 7 T18 7 T24 7 T30 7 T36 7 T42 7 T48 7 T54 7 T60 7 T66 7 T72 7 T78 7 T84 7 T90 7 T96 7 T102 7 T108 7 T114 7 T120 7" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg></div>
     </div>
   </section>
