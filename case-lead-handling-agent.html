@@ -111,6 +111,23 @@ p{font-size:16px;line-height:1.72}
 /* ── SECTION-END SQUIGGLE ── */
 .squiggle{margin-top:clamp(32px,4vw,48px);width:120px;color:var(--fg)}
 .squiggle svg{display:block;width:100%;height:auto}
+.squiggle--sm{margin:8px 0 16px;width:90px}
+
+/* ── DECISION CARDS — vertical stack (replaces the scroll-driven carousel) ── */
+.dec-list{display:flex;flex-direction:column;gap:24px;margin-top:clamp(32px,4vw,48px)}
+.dec-list .dec-card{
+  flex:none;width:100%;min-width:0;
+  border:1px solid var(--fg);border-radius:16px;
+  overflow:hidden;
+  display:grid;grid-template-columns:minmax(0,40fr) minmax(0,60fr);
+  align-items:stretch;
+  background:var(--bg);
+}
+@media(max-width:700px){.dec-list .dec-card{grid-template-columns:1fr}}
+.dec-list .dec-copy{padding:clamp(32px,3vw,40px)}
+.dec-list .dec-img{padding:0;background:var(--wash);display:flex;align-items:flex-end;justify-content:center}
+.dec-list .dec-img img{width:100%;height:auto;display:block;border-radius:0}
+.dec-list .dec-shot-row{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;margin-top:0;background:var(--wash);width:100%}
 
 /* ── STATEMENT TEXT — a plain (non-bold) 24px paragraph ── */
 .statement-text{
@@ -910,18 +927,16 @@ function pwCheck(){
   <section id="decisions">
     <div class="wrap">
       <div class="sec-head">
-        <p class="label">Solution</p>
+        <p class="label">The Solution</p>
         <h2 class="hdr">Three decisions that shaped the product.</h2>
       </div>
-    </div>
 
-    <div class="dec-outer">
-      <div class="dec-stage">
-      <div class="dec-cards">
+      <div class="dec-list">
 
         <div class="dec-card">
           <div class="dec-copy">
             <p class="dec-num">Decision 01</p>
+            <div class="squiggle squiggle--sm" aria-hidden="true"><svg viewBox="0 0 120 14" xmlns="http://www.w3.org/2000/svg"><path d="M0 7 Q3 2 6 7 T12 7 T18 7 T24 7 T30 7 T36 7 T42 7 T48 7 T54 7 T60 7 T66 7 T72 7 T78 7 T84 7 T90 7 T96 7 T102 7 T108 7 T114 7 T120 7" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg></div>
             <h3 class="dec-title">The agent needed a name, a face, and a job title.</h3>
             <p class="dec-body">We did not introduce it as AI. It joined the dealership as a named team member. Dealers chose the name, the avatar, the tone. Every message came from that identity — shoppers responded to a person, not a system.</p>
           </div>
@@ -930,11 +945,14 @@ function pwCheck(){
           </div>
         </div>
 
-        <div class="dec-card dec-card--full">
+        <div class="dec-card">
           <div class="dec-copy">
             <p class="dec-num">Decision 02</p>
+            <div class="squiggle squiggle--sm" aria-hidden="true"><svg viewBox="0 0 120 14" xmlns="http://www.w3.org/2000/svg"><path d="M0 7 Q3 2 6 7 T12 7 T18 7 T24 7 T30 7 T36 7 T42 7 T48 7 T54 7 T60 7 T66 7 T72 7 T78 7 T84 7 T90 7 T96 7 T102 7 T108 7 T114 7 T120 7" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg></div>
             <h3 class="dec-title">Visibility was the product, not a feature.</h3>
             <p class="dec-body">The biggest anxiety managers had wasn't about the agent's performance — it was not knowing what it was saying on their behalf. I designed three layers so sales teams always knew exactly where every lead stood.</p>
+          </div>
+          <div class="dec-img">
             <div class="dec-shot-row">
               <img src="lead-handling-assets/email-needs-a-human.png" alt="Needs a human follow up alert">
               <img src="lead-handling-assets/email-unresponsive-leads.png" alt="Unresponsive leads alert">
@@ -944,9 +962,22 @@ function pwCheck(){
           </div>
         </div>
 
-        <div class="dec-card dec-card--wide-img">
+        <div class="dec-card">
           <div class="dec-copy">
             <p class="dec-num">Decision 03</p>
+            <div class="squiggle squiggle--sm" aria-hidden="true"><svg viewBox="0 0 120 14" xmlns="http://www.w3.org/2000/svg"><path d="M0 7 Q3 2 6 7 T12 7 T18 7 T24 7 T30 7 T36 7 T42 7 T48 7 T54 7 T60 7 T66 7 T72 7 T78 7 T84 7 T90 7 T96 7 T102 7 T108 7 T114 7 T120 7" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg></div>
+            <h3 class="dec-title">The rep always had a seat at the table.</h3>
+            <p class="dec-body">Every conversation the agent handled was visible in real time, not as a log, not after the fact. Reps could read the thread as it unfolded and step in mid-conversation if something needed a human touch. One tap to take over. No explanation required.</p>
+          </div>
+          <div class="dec-img">
+            <img src="lead-handling-assets/conversations-v1.png" alt="Shopper conversations list with a live conversation open">
+          </div>
+        </div>
+
+        <div class="dec-card">
+          <div class="dec-copy">
+            <p class="dec-num">Decision 04</p>
+            <div class="squiggle squiggle--sm" aria-hidden="true"><svg viewBox="0 0 120 14" xmlns="http://www.w3.org/2000/svg"><path d="M0 7 Q3 2 6 7 T12 7 T18 7 T24 7 T30 7 T36 7 T42 7 T48 7 T54 7 T60 7 T66 7 T72 7 T78 7 T84 7 T90 7 T96 7 T102 7 T108 7 T114 7 T120 7" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg></div>
             <h3 class="dec-title">Dealers needed to talk to the agent, not configure it.</h3>
             <p class="dec-body">We tried giving dealers a text field to edit agent instructions directly — they'd overwrite compliance guardrails without realizing it. So Omni replaced configuration entirely: describe what you want in plain language, and the agent translates it.</p>
           </div>
@@ -955,7 +986,6 @@ function pwCheck(){
           </div>
         </div>
 
-      </div>
       </div>
 
       <div class="squiggle" aria-hidden="true"><svg viewBox="0 0 120 14" xmlns="http://www.w3.org/2000/svg"><path d="M0 7 Q3 2 6 7 T12 7 T18 7 T24 7 T30 7 T36 7 T42 7 T48 7 T54 7 T60 7 T66 7 T72 7 T78 7 T84 7 T90 7 T96 7 T102 7 T108 7 T114 7 T120 7" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg></div>
