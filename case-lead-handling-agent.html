@@ -217,14 +217,14 @@ h1{
 #img-zoom-cursor.is-on{opacity:1;transform:translate(-50%,-50%) scale(1)}
 #img-zoom-cursor svg{width:20px;height:20px;color:#000}
 /* ── FINDING CARDS ── */
-.findings{display:grid;grid-template-columns:repeat(3,1fr);margin-top:clamp(32px,4vw,48px);border-top:1px solid var(--fg);border-left:1px solid var(--fg)}
-@media(max-width:860px){.findings{grid-template-columns:1fr 1fr}}
-@media(max-width:480px){.findings{grid-template-columns:1fr}}
-.finding{border-bottom:1px solid var(--fg);border-right:1px solid var(--fg);border-radius:0;padding:24px;display:flex;flex-direction:column;gap:8px}
-.finding-num{font-size:12px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--fg)}
-.finding-title{font-size:20px;font-weight:700;line-height:1.3;letter-spacing:-0.01em}
-.finding-body{font-size:16px;line-height:1.6;color:var(--fg);flex:1}
-.finding-q{font-size:16px;line-height:1.5;color:var(--fg);font-weight:700;padding-top:16px;margin-top:4px}
+.findings{display:flex;flex-direction:column;margin-top:clamp(40px,5vw,56px)}
+.finding{display:grid;grid-template-columns:150px 1fr;gap:0 40px;padding-block:clamp(32px,4vw,40px)}
+@media(max-width:700px){.finding{grid-template-columns:1fr;gap:8px}}
+.finding-num{font-size:12px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--fg);padding-top:4px}
+.finding-content{display:flex;flex-direction:column;gap:8px}
+.finding-title{font-size:24px;font-weight:700;line-height:1.25;letter-spacing:-0.01em}
+.finding-body{font-size:16px;line-height:1.6;color:var(--fg)}
+.finding-q{font-size:16px;line-height:1.5;color:var(--fg);font-weight:700;padding-top:8px;margin-top:4px}
 
 /* ── QUOTE ── */
 blockquote{
@@ -858,21 +858,27 @@ function pwCheck(){
       <div class="findings">
         <div class="finding">
           <p class="finding-num">Finding 01</p>
-          <p class="finding-title">The inbox was the interface</p>
-          <p class="finding-body">Managers weren't checking the dashboard. They lived in email. The product was solving for a workflow that wasn't theirs.</p>
-          <p class="finding-q">How do you make the handoff seamless for two completely different people?</p>
+          <div class="finding-content">
+            <p class="finding-title">The inbox was the interface</p>
+            <p class="finding-body">Managers weren't checking the dashboard. They lived in email. The product was solving for a workflow that wasn't theirs.</p>
+            <p class="finding-q">&rarr; How do you make the hand-off seamless for two completely different people?</p>
+          </div>
         </div>
         <div class="finding">
           <p class="finding-num">Finding 02</p>
-          <p class="finding-title">Transparency, not replacement</p>
-          <p class="finding-body">Reps weren't afraid of the agent taking their job. They were afraid of not knowing what it had already said to the customer.</p>
-          <p class="finding-q">How do you build trust in an agent talking to strangers who do not know it is AI?</p>
+          <div class="finding-content">
+            <p class="finding-title">Transparency, not replacement</p>
+            <p class="finding-body">Reps weren't afraid of the agent taking their job. They were afraid of not knowing what it had already said to the customer.</p>
+            <p class="finding-q">&rarr; How do you build trust in an agent talking to strangers who do not know it is AI?</p>
+          </div>
         </div>
         <div class="finding">
           <p class="finding-num">Finding 03</p>
-          <p class="finding-title">Control without language</p>
-          <p class="finding-body">Dealers wanted to customize agent behavior but couldn't describe how. They needed guided defaults — not a blank prompt box.</p>
-          <p class="finding-q">How do you let dealers shape the agent's behavior without letting them break it?</p>
+          <div class="finding-content">
+            <p class="finding-title">Control without language</p>
+            <p class="finding-body">Dealers wanted to customize agent behavior but couldn't describe how. They needed guided defaults — not a blank prompt box.</p>
+            <p class="finding-q">&rarr; How do you let dealers shape the agent's behavior without letting them break it?</p>
+          </div>
         </div>
       </div>
 
