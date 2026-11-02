@@ -376,6 +376,15 @@ figcaption{
 .obs-divider{display:none}
 .obs-img-wrap{border-radius:16px;overflow:hidden}
 .obs-img-wrap img{width:100%;height:auto;display:block}
+.obs-img-scroll{
+  display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x proximity;
+  -webkit-overflow-scrolling:touch;scrollbar-width:none;
+  margin:0 -300px;padding:0 300px;
+}
+.obs-img-scroll::-webkit-scrollbar{display:none}
+.obs-img-scroll .obs-img-wrap{flex:0 0 min(640px,85%);scroll-snap-align:start}
+@media(max-width:1340px) and (min-width:701px){.obs-img-scroll{margin:0 -80px;padding:0 80px}}
+@media(max-width:700px){.obs-img-scroll{margin:0 -24px;padding:0 24px}.obs-img-scroll .obs-img-wrap{flex-basis:88%}}
 .obs-caption{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--fg);margin-top:8px;line-height:1.7}
 .obs-cols{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(16px,2.5vw,32px)}
 @media(max-width:700px){.obs-cols{grid-template-columns:1fr}}
@@ -1213,11 +1222,11 @@ function pwCheck(){
         <p>After beta we opened to paying customers and scaled. Alongside growth we shipped V3 of Design Your Agent, continued improving the LLM, and made dozens of smaller UX fixes based on what sales managers and reps were actually running into.</p>
       </div>
 
-      <div class="tk-line">
-        <span class="tk">Numbers TK</span>
-        <br><br>
-        Paying customers, total leads handled, and total appointments set are still blank in the content doc.
-        Drop them in and this becomes the strongest stat row on the page.
+      <div class="stats">
+        <div class="stat">
+          <p class="stat-n">160</p>
+          <p class="stat-l">paying dealerships</p>
+        </div>
       </div>
 
       <div class="squiggle" aria-hidden="true"><svg viewBox="0 0 120 14" xmlns="http://www.w3.org/2000/svg"><path d="M0 7 Q3 2 6 7 T12 7 T18 7 T24 7 T30 7 T36 7 T42 7 T48 7 T54 7 T60 7 T66 7 T72 7 T78 7 T84 7 T90 7 T96 7 T102 7 T108 7 T114 7 T120 7" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg></div>
@@ -1240,8 +1249,13 @@ function pwCheck(){
         <p class="obs-label">Redesign 01</p>
         <h3 class="obs-title">The conversation list became a command center.</h3>
         <div>
-          <div class="obs-img-wrap">
-            <img src="lead-handling-assets/conversations-v2.png" alt="Redesigned conversation list">
+          <div class="obs-img-scroll">
+            <div class="obs-img-wrap">
+              <img src="lead-handling-assets/conversations-v1.png" alt="Shopper conversations list and thread">
+            </div>
+            <div class="obs-img-wrap">
+              <img src="lead-handling-assets/conversations-v2.png" alt="Redesigned conversation list">
+            </div>
           </div>
           <p class="obs-caption">1,500+ conversations, reorganized around what needs a human.</p>
         </div>
